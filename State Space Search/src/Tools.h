@@ -12,8 +12,12 @@ public:
     int dimSquare;
 
     Tools(int _dimSquare);
+    void CleanMatrix(MagicSquare::Square *square);
     void InitializeSquare(MagicSquare::Square *square);
+    void GenerateSquare(MagicSquare::Square *square);
     void ShowSquare(MagicSquare::Square *square);
+    int MagicSquareCombinations(int N);
+    bool IsMagicSquare(MagicSquare::Square *square);
 
 private:
 

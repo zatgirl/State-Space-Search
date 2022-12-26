@@ -58,10 +58,11 @@ int main(void)
     tools = new Tools(3);
 
     tools->InitializeSquare(magicSquare->square);
-    tools->ShowSquare(magicSquare->square);
+    //tools->ShowSquare(magicSquare->square);
+    tools->GenerateSquare(magicSquare->square);
 
-    CV::init(&screenWidth, &screenHeight, "T3 - State Space Search");
-    CV::run();
+    //CV::init(&screenWidth, &screenHeight, "T3 - State Space Search");
+    //CV::run();
 
     return 0;
 }

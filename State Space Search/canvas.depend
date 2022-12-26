@@ -893,7 +893,7 @@
 
 1669779568 d:\documentos\github\state-space-search\state space search\src\vector3.h
 
-1672027684 source:d:\documentos\github\state-space-search\state space search\src\main.cpp
+1672089191 source:d:\documentos\github\state-space-search\state space search\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
@@ -914,14 +914,15 @@
 1672027648 source:d:\documentos\github\state-space-search\state space search\src\magicsquare.cpp
 	"MagicSquare.h"
 
-1672027648 source:d:\documentos\github\state-space-search\state space search\src\tools.cpp
+1672091660 source:d:\documentos\github\state-space-search\state space search\src\tools.cpp
 	"Tools.h"
 
-1672027648 d:\documentos\github\state-space-search\state space search\src\magicsquare.h
+1672088662 d:\documentos\github\state-space-search\state space search\src\magicsquare.h
 	<stdio.h>
 	<stdlib.h>
+	<cmath>
 
-1672026479 d:\documentos\github\state-space-search\state space search\src\tools.h
+1672090198 d:\documentos\github\state-space-search\state space search\src\tools.h
 	<stdio.h>
 	<stdlib.h>
 	"MagicSquare.h"
