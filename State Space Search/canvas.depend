@@ -856,3 +856,73 @@
 1670192933 source:d:\documentos\github\spatial-hashing\spatial hashing\src\spatialhash.cpp
 	"spatialhash.h"
 
+1669779568 source:d:\documentos\github\state-space-search\state space search\src\gl_canvas2d.cpp
+	"gl_canvas2d.h"
+	<GL/glut.h>
+
+1669779568 d:\documentos\github\state-space-search\state space search\src\gl_canvas2d.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<iostream>
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	"Vector2.h"
+	"Vector3.h"
+
+1669779568 d:\documentos\github\state-space-search\state space search\include\gl\glut.h
+	"freeglut_std.h"
+
+1669779568 d:\documentos\github\state-space-search\state space search\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1669779568 d:\documentos\github\state-space-search\state space search\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1669947060 d:\documentos\github\state-space-search\state space search\src\vector2.h
+	<math.h>
+
+1669779568 d:\documentos\github\state-space-search\state space search\src\vector3.h
+
+1672027684 source:d:\documentos\github\state-space-search\state space search\src\main.cpp
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<vector>
+	"gl_canvas2d.h"
+	"Vector2.h"
+	"Vector3.h"
+	"Frames.h"
+	"MagicSquare.h"
+	"Tools.h"
+
+1669779568 d:\documentos\github\state-space-search\state space search\src\frames.h
+	<stdio.h>
+	<time.h>
+
+1672027648 source:d:\documentos\github\state-space-search\state space search\src\magicsquare.cpp
+	"MagicSquare.h"
+
+1672027648 source:d:\documentos\github\state-space-search\state space search\src\tools.cpp
+	"Tools.h"
+
+1672027648 d:\documentos\github\state-space-search\state space search\src\magicsquare.h
+	<stdio.h>
+	<stdlib.h>
+
+1672026479 d:\documentos\github\state-space-search\state space search\src\tools.h
+	<stdio.h>
+	<stdlib.h>
+	"MagicSquare.h"
+

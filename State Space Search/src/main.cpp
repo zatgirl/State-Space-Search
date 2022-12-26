@@ -13,18 +13,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <vector>
-#include <time.h>
-#include <iomanip>
 
 #include "gl_canvas2d.h"
 
 #include "Vector2.h"
 #include "Vector3.h"
 #include "Frames.h"
+#include "MagicSquare.h"
+#include "Tools.h"
 
-int screenWidth = 1800, screenHeight = 900;
+MagicSquare *magicSquare;
+Tools *tools;
+
+int screenWidth = 900, screenHeight = 900;
 bool click = false;
 float fps;
+
+int grade = 3;
 
 void render()
 {
@@ -49,6 +54,12 @@ void mouse(int button, int state, int wheel, int direction, int x, int y)
 
 int main(void)
 {
+    magicSquare = new MagicSquare();
+    tools = new Tools(3);
+
+    tools->InitializeSquare(magicSquare->square);
+    tools->ShowSquare(magicSquare->square);
+
     CV::init(&screenWidth, &screenHeight, "T3 - State Space Search");
     CV::run();
 
