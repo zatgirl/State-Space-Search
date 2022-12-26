@@ -18,6 +18,8 @@ public:
     void ShowSquare(MagicSquare::Square *square);
     int MagicSquareCombinations(int N);
     bool IsMagicSquare(MagicSquare::Square *square);
+    bool GenerateSquareRec(MagicSquare::Square *square, int stop);
+    int FillsCell(int num, int cond, MagicSquare::Square *square);
 
 private:
 

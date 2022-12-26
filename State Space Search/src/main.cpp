@@ -60,6 +60,7 @@ int main(void)
     tools->InitializeSquare(magicSquare->square);
     //tools->ShowSquare(magicSquare->square);
     tools->GenerateSquare(magicSquare->square);
+//    tools->GenerateSquareRec(magicSquare->square, magicSquare->square.amountCells);
 
     //CV::init(&screenWidth, &screenHeight, "T3 - State Space Search");
     //CV::run();

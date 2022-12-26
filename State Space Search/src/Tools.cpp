@@ -7,6 +7,7 @@ Tools::Tools(int _dimSquare)
 
 void Tools::InitializeSquare(MagicSquare::Square *square)
 {
+    bool teste;
     for(int line = 0; line < this->dimSquare; line ++)
     {
         for(int coll = 0; coll < this->dimSquare; coll ++)
@@ -16,6 +17,8 @@ void Tools::InitializeSquare(MagicSquare::Square *square)
     }
     square->magicConst = ((this->dimSquare * (pow(this->dimSquare, 2) + 1)) / 2);
     square->amountCells = pow(this->dimSquare, 2);
+
+    teste = Tools::GenerateSquareRec(square, square->amountCells);
 }
 
 void Tools::CleanMatrix(MagicSquare::Square *square)
@@ -99,10 +102,8 @@ void Tools::GenerateSquare(MagicSquare::Square *square)
                                         if(Tools::IsMagicSquare(square))
                                         {
                                             square->permutations ++;
-
                                         }
                                         i++;
-                                        //Tools::CleanMatrix(square);
                                     }
                                 }
                             }
@@ -182,6 +183,61 @@ void Tools::ShowSquare(MagicSquare::Square *square)
         printf("%d ",   square->grade[line][1]);
         printf("%d \n", square->grade[line][2]);
     }
+}
+
+bool Tools::GenerateSquareRec(MagicSquare::Square *square, int stop)
+{
+    bool condStop = false;
+    int cont;
+    for(int line = 0; line < this->dimSquare; line ++)
+    {
+        for(int coll = 0; coll < this->dimSquare; coll ++)
+        {
+            square->grade[line][coll] = Tools::FillsCell(square->grade[line][coll], this->dimSquare, square);
+        }
+    }
+    if(Tools::IsMagicSquare(square))
+    {
+        square->permutations ++;
+    }
+    else
+    {
+        for(int line = 0; line < this->dimSquare; line ++)
+        {
+            for(int coll = 0; coll < this->dimSquare; coll ++)
+            {
+                if(square->grade[line][coll] == stop)
+                {
+                    cont ++;
+                }
+            }
+        }
+        if(cont == stop)
+        {
+            return true;
+        }
+        if(cont != stop)
+        {
+            condStop = Tools::GenerateSquareRec(square, stop);
+        }
+    }
+}
+
+int Tools::FillsCell(int num, int cond, MagicSquare::Square *square)
+{
+    int n;
+
+    for(int line = 0; line < this->dimSquare; line ++)
+    {
+        for(int coll = 0; coll < this->dimSquare; coll ++)
+        {
+            if (num == square->grade[line][coll])
+            {
+                n = Tools::FillsCell(num + 1, cond, square);
+            }
+        }
+    }
+    return n;
 }
 
 int Tools::MagicSquareCombinations (int N)
